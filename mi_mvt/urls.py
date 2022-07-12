@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from mi_app.views import saludo
-from mi_app.views import calcular_imc, listar_cursos, listar_familia, formulario_curso, formulario_busqueda
+from mi_app.views import calcular_imc, listar_cursos, listar_familia, formulario_curso, formulario_busqueda, listar_equipos, formulario_equipo, formulario_busqueda_equipo
 from manejador_contenido.views import mostrar_home, mostrar_profile
 
 urlpatterns = [
@@ -28,6 +28,9 @@ urlpatterns = [
     path("home/", mostrar_home),
     path("profile/", mostrar_profile),
     path("formulario/", formulario_curso),
-    path("buscar/", formulario_busqueda)
+    path("buscar/", formulario_busqueda),
+    path("listar-equipos/", listar_equipos),
+    path("formulario-equipo/", formulario_equipo),
+    path("buscar-equipo/", formulario_busqueda_equipo),
     
 ]

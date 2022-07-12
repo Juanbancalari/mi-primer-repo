@@ -3,7 +3,14 @@ from django import forms
 class CursoFormulario(forms.Form):
     curso = forms.CharField()
     camada = forms.IntegerField()
-    email = forms.EmailField()
 
 class CursoBusquedaFormulario(forms.Form):
+    criterio = forms.CharField()
+
+class EquipoFormulario(forms.Form):
+    nombre = forms.CharField()
+    posicion = forms.IntegerField()
+    email = forms.EmailField()
+
+class EquipoBusquedaFormulario(forms.Form):
     criterio = forms.CharField()

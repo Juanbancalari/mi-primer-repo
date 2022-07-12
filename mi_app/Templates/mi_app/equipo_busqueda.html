@@ -8,25 +8,27 @@
 </head>
 <body>
   
-<h1>BUSQUEDA DE CURSO POR NOMBRE</h1>
+<h1>BUSQUEDA DE JUGADORES POR NOMBRE</h1>
 
 <form action="" method="GET">
 
-        {{busqueda_formulario}}
+        {{busqueda_formulario_equipo}}
     
         <button type="submit">Buscar</button>
-</form>
 
-{% if cursos %}
+
+</form>
+{% if equipos %}
     <ul>
-    {% for curso in cursos %}
-        <li>{{curso.nombre}}</li>   
+    {% for equipo in equipos %}
+        <li>{{equipo.nombre}}</li>
     {% endfor %}
     </ul>
 {% else %}
-    <h1> No hay cursos con ese criterio !!</h1>
-    
+    <h1>NO HAY EQUIPO CON ESE CRITERIOOO</h1> 
+        
 {% endif %}
+
 
 </body>
 </html>
