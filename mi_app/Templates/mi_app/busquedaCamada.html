@@ -7,12 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <ul>
-        {% for curso in cursos %}
-            <li> {{curso.nombre}},{{curso.camada},} !!!! </li>
-        {% endfor %}
-    </ul>    
+    <form action="/mi_app/buscar/" method="GET">
 
+        <input type="number" name="camada" id="camada">
+        <input type="submit" value="Buscar">
     
+
+
 </body>
 </html>
