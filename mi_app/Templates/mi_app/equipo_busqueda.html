@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUSQUEDA</title>
+</head>
+<body>
+  
+<h1 style="color:rgb(181, 149, 100); width: 90%; font-size: 230%; text-align: center;">BUSQUEDA DE JUGADORES POR NOMBRE</h1>
+<body style="background-color:darkolivegreen">
+    <body>
+<form action="" method="GET">
+    {{busqueda_formulario_equipo}}
+    <button type="submit" style="color:rgb(163, 78, 26); font-size: 110%; width:120px; height:40px">Buscar</button>
+</form>
+{% if equipos %}
+    <ul>
+    {% for equipo in equipos %}
+        <li>{{equipo.nombre}}</li>   
+    {% endfor %}
+    </ul>
+{% else %}
+    <h1 style="color:rgb(99, 23, 23)"> No hay jugadores con ese criterio !!</h1>
+
+{% endif %}
+
+<textarea name="comentarios" cols="70" rows="7">
+    Aca pasa algo similar, realiza la busqueda pero lo encuentre o no, no confirma ni rechaza el ingreso. Segui los pasos textuales del repo de German y de las diapositivas pero no me lleva a ningun lado :( :( :(
+    Es mas, deje el % else % con el mensaje de no hay jugadores con criterio exactamente como German y tampoco recorre bien el codigo.
+    
+    </textarea>
+
+</body>
+</html>

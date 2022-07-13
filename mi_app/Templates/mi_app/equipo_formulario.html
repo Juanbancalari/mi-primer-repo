@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO CARGA</title>
+</head>
+<h1 style="color:rgb(181, 149, 100); width: 90%; font-size: 230%; text-align: center;">FORMULARIO PARA AGREGAR JUGADORES Y POSICION</h1>
+<body style="background-color:darkolivegreen">
+<body>
+
+
+{% if mi_equipo.errors %}
+<p style="color:red;"> Están mal los datos. revisar </p>
+
+{% endif %}
+
+<form action="" method="POST">{% csrf_token %}
+
+    <table>
+
+        {{mi_equipo.as_table}}
+
+    </table>
+
+<input type="submit", value="Enviar" style="color:rgb(95, 72, 38); font-size: 120%; width:150px; height:45px"> 
+<br>
+
+    <br>
+<textarea name="comentarios" cols="70" rows="5">
+¡¡ No estoy seguro porque no retorna un mensaje de exito a pesar de agregarse correctamente en Admin!!!
+Intente todo combinando el repositorio de German y las presentaciones, y hay algo faltante, no pude resolverlo
+
+</textarea>
+</form>

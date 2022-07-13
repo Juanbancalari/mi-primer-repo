@@ -8,3 +8,10 @@ class CursoFormulario(forms.Form):
 class CursoBusquedaFormulario(forms.Form):
     criterio = forms.CharField()
 
+class EquipoFormulario(forms.Form):
+    equipo = forms.CharField()
+    posicion = forms.IntegerField()
+    email= forms.EmailField()
+
+class EquipoBusquedaFormulario(forms.Form):
+    criterio = forms.CharField()    
